@@ -1,0 +1,1503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProdajaNekretninaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="IzlazStavke">
+    <Key>
+      <PropertyRef Name="IzlazStavkaID" />
+    </Key>
+    <Property Name="IzlazStavkaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IzlazID" Type="Int32" Nullable="false" />
+    <Property Name="NekretninaID" Type="Int32" Nullable="false" />
+    <Property Name="Kolicina" Type="Int32" Nullable="false" />
+    <Property Name="Cijena" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Popust" Type="Decimal" Precision="5" Scale="2" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_IzlazStavke_Proizvodi" FromRole="IzlazStavke" ToRole="Nekretnine" />
+    <NavigationProperty Name="Izlazi" Relationship="ProdajaNekretninaModel.FK_IzlazStavke_Izlazi" FromRole="IzlazStavke" ToRole="Izlazi" />
+  </EntityType>
+  <EntityType Name="Kategorije">
+    <Key>
+      <PropertyRef Name="KategorijaID" />
+    </Key>
+    <Property Name="KategorijaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazivKategorije" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Kategorije" FromRole="Kategorije" ToRole="Nekretnine" />
+  </EntityType>
+  <EntityType Name="Korisnici">
+    <Key>
+      <PropertyRef Name="KorisnikID" />
+    </Key>
+    <Property Name="KorisnikID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="KorisnickoIme" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LozinkaHash" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LozinkaSalt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="KorisniciUloge" Relationship="Self.FK_KorisniciUloge_Korisnici" FromRole="Korisnici" ToRole="KorisniciUloge" />
+    <NavigationProperty Name="Izlazi" Relationship="ProdajaNekretninaModel.FK_Izlazi_Korisnici" FromRole="Korisnici" ToRole="Izlazi" />
+  </EntityType>
+  <EntityType Name="KorisniciUloge">
+    <Key>
+      <PropertyRef Name="KorisnikUlogaID" />
+    </Key>
+    <Property Name="KorisnikUlogaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KorisnikID" Type="Int32" Nullable="false" />
+    <Property Name="UlogaID" Type="Int32" Nullable="false" />
+    <Property Name="DatumIzmjene" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Korisnici" Relationship="Self.FK_KorisniciUloge_Korisnici" FromRole="KorisniciUloge" ToRole="Korisnici" />
+    <NavigationProperty Name="Uloge" Relationship="Self.FK_KorisniciUloge_Uloge" FromRole="KorisniciUloge" ToRole="Uloge" />
+  </EntityType>
+  <EntityType Name="Kupci">
+    <Key>
+      <PropertyRef Name="KupacID" />
+    </Key>
+    <Property Name="KupacID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DatumRegistracije" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KorisnickoIme" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LozinkaHash" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LozinkaSalt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Narudzbe" Relationship="Self.FK_Narudzbe_Kupci" FromRole="Kupci" ToRole="Narudzbe" />
+    <NavigationProperty Name="Ocjene" Relationship="Self.FK_Ocjene_Kupci" FromRole="Kupci" ToRole="Ocjene" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Kupci" FromRole="Kupci" ToRole="Nekretnine" />
+    <NavigationProperty Name="Potraznja" Relationship="ProdajaNekretninaModel.FK_Potraznja_Kupci" FromRole="Kupci" ToRole="Potraznja" />
+  </EntityType>
+  <EntityType Name="NarudzbaStavke">
+    <Key>
+      <PropertyRef Name="NarudzbaStavkaID" />
+    </Key>
+    <Property Name="NarudzbaStavkaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NarudzbaID" Type="Int32" Nullable="false" />
+    <Property Name="NekretninaID" Type="Int32" Nullable="false" />
+    <Property Name="Kolicina" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Narudzbe" Relationship="Self.FK_NarudzbaStavke_Narudzbe" FromRole="NarudzbaStavke" ToRole="Narudzbe" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_NarudzbaStavke_Proizvodi" FromRole="NarudzbaStavke" ToRole="Nekretnine" />
+  </EntityType>
+  <EntityType Name="Narudzbe">
+    <Key>
+      <PropertyRef Name="NarudzbaID" />
+    </Key>
+    <Property Name="NarudzbaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrojNarudzbe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KupacID" Type="Int32" Nullable="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="Otkazano" Type="Boolean" />
+    <NavigationProperty Name="Kupci" Relationship="Self.FK_Narudzbe_Kupci" FromRole="Narudzbe" ToRole="Kupci" />
+    <NavigationProperty Name="NarudzbaStavke" Relationship="Self.FK_NarudzbaStavke_Narudzbe" FromRole="Narudzbe" ToRole="NarudzbaStavke" />
+    <NavigationProperty Name="Izlazi" Relationship="ProdajaNekretninaModel.FK_Izlazi_Narudzbe" FromRole="Narudzbe" ToRole="Izlazi" />
+  </EntityType>
+  <EntityType Name="Ocjene">
+    <Key>
+      <PropertyRef Name="OcjenaID" />
+    </Key>
+    <Property Name="OcjenaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NekretninaID" Type="Int32" Nullable="false" />
+    <Property Name="KupacID" Type="Int32" Nullable="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ocjena" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Kupci" Relationship="Self.FK_Ocjene_Kupci" FromRole="Ocjene" ToRole="Kupci" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Ocjene_Proizvodi" FromRole="Ocjene" ToRole="Nekretnine" />
+  </EntityType>
+  <EntityType Name="SlikeNekretnina">
+    <Key>
+      <PropertyRef Name="SlikaID" />
+    </Key>
+    <Property Name="SlikaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SlikaNekretnine" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="NekretninaID" Type="Int32" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_SlikeNekretnina_Nekretnine" FromRole="SlikeNekretnina" ToRole="Nekretnine" />
+  </EntityType>
+  <EntityType Name="Sobe">
+    <Key>
+      <PropertyRef Name="SobaID" />
+    </Key>
+    <Property Name="SobaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrojSoba" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Sobe" FromRole="Sobe" ToRole="Nekretnine" />
+  </EntityType>
+  <EntityType Name="Spratovi">
+    <Key>
+      <PropertyRef Name="SpratID" />
+    </Key>
+    <Property Name="SpratID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazivSprata" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Spratovi" FromRole="Spratovi" ToRole="Nekretnine" />
+  </EntityType>
+  <EntityType Name="StanjaNekretnina">
+    <Key>
+      <PropertyRef Name="StanjeID" />
+    </Key>
+    <Property Name="StanjeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazivStanja" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Nekretnine_StanjaNekretnina" FromRole="StanjaNekretnina" ToRole="Nekretnine" />
+  </EntityType>
+  <EntityType Name="TipGrijanja">
+    <Key>
+      <PropertyRef Name="GrijanjeID" />
+    </Key>
+    <Property Name="GrijanjeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazivGrijanja" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Nekretnine_TipGrijanja" FromRole="TipGrijanja" ToRole="Nekretnine" />
+  </EntityType>
+  <EntityType Name="Uloge">
+    <Key>
+      <PropertyRef Name="UlogaID" />
+    </Key>
+    <Property Name="UlogaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Opis" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KorisniciUloge" Relationship="Self.FK_KorisniciUloge_Uloge" FromRole="Uloge" ToRole="KorisniciUloge" />
+  </EntityType>
+  <EntityType Name="VrsteProdaje">
+    <Key>
+      <PropertyRef Name="VrstaID" />
+    </Key>
+    <Property Name="VrstaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazivVrste" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Nekretnine_VrsteProdaje" FromRole="VrsteProdaje" ToRole="Nekretnine" />
+  </EntityType>
+  <Association Name="FK_KorisniciUloge_Korisnici">
+    <End Role="Korisnici" Type="Self.Korisnici" Multiplicity="1" />
+    <End Role="KorisniciUloge" Type="Self.KorisniciUloge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikID" />
+      </Principal>
+      <Dependent Role="KorisniciUloge">
+        <PropertyRef Name="KorisnikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KorisniciUloge_Uloge">
+    <End Role="Uloge" Type="Self.Uloge" Multiplicity="1" />
+    <End Role="KorisniciUloge" Type="Self.KorisniciUloge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uloge">
+        <PropertyRef Name="UlogaID" />
+      </Principal>
+      <Dependent Role="KorisniciUloge">
+        <PropertyRef Name="UlogaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Narudzbe_Kupci">
+    <End Role="Kupci" Type="Self.Kupci" Multiplicity="1" />
+    <End Role="Narudzbe" Type="Self.Narudzbe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Narudzbe">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ocjene_Kupci">
+    <End Role="Kupci" Type="Self.Kupci" Multiplicity="1" />
+    <End Role="Ocjene" Type="Self.Ocjene" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Ocjene">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NarudzbaStavke_Narudzbe">
+    <End Role="Narudzbe" Type="Self.Narudzbe" Multiplicity="1" />
+    <End Role="NarudzbaStavke" Type="Self.NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Narudzbe">
+        <PropertyRef Name="NarudzbaID" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="NarudzbaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProdajaNekretninaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="IzlazStavke" EntityType="Self.IzlazStavke" />
+    <EntitySet Name="Kategorije" EntityType="Self.Kategorije" />
+    <EntitySet Name="Korisnici" EntityType="Self.Korisnici" />
+    <EntitySet Name="KorisniciUloge" EntityType="Self.KorisniciUloge" />
+    <EntitySet Name="Kupci" EntityType="Self.Kupci" />
+    <EntitySet Name="NarudzbaStavke" EntityType="Self.NarudzbaStavke" />
+    <EntitySet Name="Narudzbe" EntityType="Self.Narudzbe" />
+    <EntitySet Name="Ocjene" EntityType="Self.Ocjene" />
+    <EntitySet Name="SlikeNekretnina" EntityType="Self.SlikeNekretnina" />
+    <EntitySet Name="Sobe" EntityType="Self.Sobe" />
+    <EntitySet Name="Spratovi" EntityType="Self.Spratovi" />
+    <EntitySet Name="StanjaNekretnina" EntityType="Self.StanjaNekretnina" />
+    <EntitySet Name="TipGrijanja" EntityType="Self.TipGrijanja" />
+    <EntitySet Name="Uloge" EntityType="Self.Uloge" />
+    <EntitySet Name="VrsteProdaje" EntityType="Self.VrsteProdaje" />
+    <AssociationSet Name="FK_KorisniciUloge_Korisnici" Association="Self.FK_KorisniciUloge_Korisnici">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="KorisniciUloge" EntitySet="KorisniciUloge" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KorisniciUloge_Uloge" Association="Self.FK_KorisniciUloge_Uloge">
+      <End Role="Uloge" EntitySet="Uloge" />
+      <End Role="KorisniciUloge" EntitySet="KorisniciUloge" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Narudzbe_Kupci" Association="Self.FK_Narudzbe_Kupci">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Narudzbe" EntitySet="Narudzbe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ocjene_Kupci" Association="Self.FK_Ocjene_Kupci">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Ocjene" EntitySet="Ocjene" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NarudzbaStavke_Narudzbe" Association="Self.FK_NarudzbaStavke_Narudzbe">
+      <End Role="Narudzbe" EntitySet="Narudzbe" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavke" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Korisnici_SelectByKorisnickoIme" EntitySet="Korisnici" ReturnType="Collection(ProdajaNekretninaModel.Korisnici)">
+      <Parameter Name="KorisnickoIme" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_KorisniciUloge_SelectByKorisnik" EntitySet="KorisniciUloge" ReturnType="Collection(ProdajaNekretninaModel.KorisniciUloge)">
+      <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_KorisniciUloge_Insert">
+      <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
+      <Parameter Name="UlogaID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Uloge_SelectAll" EntitySet="Uloge" ReturnType="Collection(ProdajaNekretninaModel.Uloge)" />
+    <FunctionImport Name="esp_Korisnici_SelectByName" ReturnType="Collection(ProdajaNekretninaModel.esp_Korisnici_SelectByName_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Korisnici_UpdateStatus">
+      <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
+      <Parameter Name="Status" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Korisnici_Update">
+      <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
+      <Parameter Name="Ime" Mode="In" Type="String" />
+      <Parameter Name="Prezime" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Telefon" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Korisnici_ResetPass">
+      <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
+      <Parameter Name="LozinkaSalt" Mode="In" Type="String" />
+      <Parameter Name="LozinkaHash" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_KorisniciUlogeTEMP_SelectByKorisnik" EntitySet="Uloge" ReturnType="Collection(ProdajaNekretninaModel.Uloge)">
+      <Parameter Name="KorisnikID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Gradovi" EntityType="ProdajaNekretninaModel.Gradovi" />
+    <EntitySet Name="Kantoni" EntityType="ProdajaNekretninaModel.Kantoni" />
+    <AssociationSet Name="FK_Gradovi_Kantoni" Association="ProdajaNekretninaModel.FK_Gradovi_Kantoni">
+      <End Role="Kantoni" EntitySet="Kantoni" />
+      <End Role="Gradovi" EntitySet="Gradovi" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Nekretnine_PretragaAdmin" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_PretragaAdmin_Result)">
+      <Parameter Name="KategorijaID" Mode="In" Type="Int32" />
+      <Parameter Name="VrstaID" Mode="In" Type="Int32" />
+      <Parameter Name="Aktivna" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Kupci_SelectByEmail" EntitySet="Kupci" ReturnType="Collection(ProdajaNekretninaModel.Kupci)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_SelectZadnjeDodane" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectZadnjeDodane_Result)" />
+    <FunctionImport Name="esp_Nekretnine_SelectProdaja" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectProdaja_Result)">
+      <Parameter Name="kategorijaID" Mode="In" Type="Int32" />
+      <Parameter Name="kantonID" Mode="In" Type="Int32" />
+      <Parameter Name="gradID" Mode="In" Type="Int32" />
+      <Parameter Name="stanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="cijenaOD" Mode="In" Type="Double" />
+      <Parameter Name="cijenaDO" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_SelectPotraznja" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectPotraznja_Result)">
+      <Parameter Name="kategorijaID" Mode="In" Type="Int32" />
+      <Parameter Name="kantonID" Mode="In" Type="Int32" />
+      <Parameter Name="gradID" Mode="In" Type="Int32" />
+      <Parameter Name="stanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="cijenaOD" Mode="In" Type="Double" />
+      <Parameter Name="cijenaDO" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_SelectZadnjeDodaneProdaja" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectZadnjeDodaneProdaja_Result)" />
+    <FunctionImport Name="esp_Nekretnine_SelectZadnjeDodaneIznajmljivanje" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectZadnjeDodaneIznajmljivanje_Result)" />
+    <FunctionImport Name="esp_Nekretnine_SelectIznajmljivanje" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectIznajmljivanje_Result)">
+      <Parameter Name="kategorijaID" Mode="In" Type="Int32" />
+      <Parameter Name="kantonID" Mode="In" Type="Int32" />
+      <Parameter Name="gradID" Mode="In" Type="Int32" />
+      <Parameter Name="stanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="cijenaOD" Mode="In" Type="Double" />
+      <Parameter Name="cijenaDO" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Narudzbe_Insert" ReturnType="Collection(Int32)">
+      <Parameter Name="BrojNarudzbe" Mode="In" Type="String" />
+      <Parameter Name="KupacID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_NarudzbaStavke_Insert">
+      <Parameter Name="NarudzbaID" Mode="In" Type="Int32" />
+      <Parameter Name="ProizvodID" Mode="In" Type="Int32" />
+      <Parameter Name="Kolicina" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Ocjene_Provjeri" EntitySet="Ocjene" ReturnType="Collection(ProdajaNekretninaModel.Ocjene)">
+      <Parameter Name="KupacID" Mode="In" Type="Int32" />
+      <Parameter Name="NekretninaID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_Insert" ReturnType="Collection(Decimal)">
+      <Parameter Name="vrstaid" Mode="In" Type="Int32" />
+      <Parameter Name="kategorijaID" Mode="In" Type="Int32" />
+      <Parameter Name="kantonID" Mode="In" Type="Int32" />
+      <Parameter Name="sobID" Mode="In" Type="Int32" />
+      <Parameter Name="spratID" Mode="In" Type="Int32" />
+      <Parameter Name="grijanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="stanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="korisnikID" Mode="In" Type="Int32" />
+      <Parameter Name="Naslov" Mode="In" Type="String" />
+      <Parameter Name="brojKvadrata" Mode="In" Type="Int32" />
+      <Parameter Name="Adresa" Mode="In" Type="String" />
+      <Parameter Name="cijena" Mode="In" Type="Double" />
+      <Parameter Name="godinaIzgradnje" Mode="In" Type="Int32" />
+      <Parameter Name="voda" Mode="In" Type="Boolean" />
+      <Parameter Name="struja" Mode="In" Type="Boolean" />
+      <Parameter Name="kanalizacija" Mode="In" Type="Boolean" />
+      <Parameter Name="uknjizeno" Mode="In" Type="Boolean" />
+      <Parameter Name="parking" Mode="In" Type="Boolean" />
+      <Parameter Name="lift" Mode="In" Type="Boolean" />
+      <Parameter Name="namjesten" Mode="In" Type="Boolean" />
+      <Parameter Name="internet" Mode="In" Type="Boolean" />
+      <Parameter Name="novogradnja" Mode="In" Type="Boolean" />
+      <Parameter Name="adaptiran" Mode="In" Type="Boolean" />
+      <Parameter Name="garaza" Mode="In" Type="Boolean" />
+      <Parameter Name="telefon" Mode="In" Type="Boolean" />
+      <Parameter Name="slika" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <EntitySet Name="Nekretnine" EntityType="ProdajaNekretninaModel.Nekretnine" />
+    <AssociationSet Name="FK_IzlazStavke_Proizvodi" Association="ProdajaNekretninaModel.FK_IzlazStavke_Proizvodi">
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+      <End Role="IzlazStavke" EntitySet="IzlazStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nekretnine_Kantoni" Association="ProdajaNekretninaModel.FK_Nekretnine_Kantoni">
+      <End Role="Kantoni" EntitySet="Kantoni" />
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nekretnine_Kategorije" Association="ProdajaNekretninaModel.FK_Nekretnine_Kategorije">
+      <End Role="Kategorije" EntitySet="Kategorije" />
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nekretnine_Kupci" Association="ProdajaNekretninaModel.FK_Nekretnine_Kupci">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NarudzbaStavke_Proizvodi" Association="ProdajaNekretninaModel.FK_NarudzbaStavke_Proizvodi">
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+      <End Role="NarudzbaStavke" EntitySet="NarudzbaStavke" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nekretnine_Sobe" Association="ProdajaNekretninaModel.FK_Nekretnine_Sobe">
+      <End Role="Sobe" EntitySet="Sobe" />
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nekretnine_Spratovi" Association="ProdajaNekretninaModel.FK_Nekretnine_Spratovi">
+      <End Role="Spratovi" EntitySet="Spratovi" />
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nekretnine_StanjaNekretnina" Association="ProdajaNekretninaModel.FK_Nekretnine_StanjaNekretnina">
+      <End Role="StanjaNekretnina" EntitySet="StanjaNekretnina" />
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nekretnine_TipGrijanja" Association="ProdajaNekretninaModel.FK_Nekretnine_TipGrijanja">
+      <End Role="TipGrijanja" EntitySet="TipGrijanja" />
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Nekretnine_VrsteProdaje" Association="ProdajaNekretninaModel.FK_Nekretnine_VrsteProdaje">
+      <End Role="VrsteProdaje" EntitySet="VrsteProdaje" />
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ocjene_Proizvodi" Association="ProdajaNekretninaModel.FK_Ocjene_Proizvodi">
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+      <End Role="Ocjene" EntitySet="Ocjene" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SlikeNekretnina_Nekretnine" Association="ProdajaNekretninaModel.FK_SlikeNekretnina_Nekretnine">
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+      <End Role="SlikeNekretnina" EntitySet="SlikeNekretnina" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Nekretnine_UpdateBrojPosjeta">
+      <Parameter Name="brojPojeta" Mode="In" Type="Int32" />
+      <Parameter Name="nekretninaID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Kupci_Update">
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="kupacid" Mode="In" Type="Int32" />
+      <Parameter Name="salt" Mode="In" Type="String" />
+      <Parameter Name="lozinka" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_SelectByKupac" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectByKupac_Result)">
+      <Parameter Name="kupacID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_TOP3" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_TOP3_Result)" />
+    <FunctionImport Name="esp_Narudzba_Insert" ReturnType="Collection(Decimal)">
+      <Parameter Name="brojracuna" Mode="In" Type="Int32" />
+      <Parameter Name="bezPDV" Mode="In" Type="Decimal" />
+      <Parameter Name="saPDV" Mode="In" Type="Decimal" />
+      <Parameter Name="korisnikID" Mode="In" Type="Int32" />
+      <Parameter Name="narudzbaID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Narudzba_UpdateStatus">
+      <Parameter Name="narudzbaID" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <EntitySet Name="Izlazi" EntityType="ProdajaNekretninaModel.Izlazi" />
+    <AssociationSet Name="FK_Izlazi_Korisnici" Association="ProdajaNekretninaModel.FK_Izlazi_Korisnici">
+      <End Role="Korisnici" EntitySet="Korisnici" />
+      <End Role="Izlazi" EntitySet="Izlazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Izlazi_Narudzbe" Association="ProdajaNekretninaModel.FK_Izlazi_Narudzbe">
+      <End Role="Narudzbe" EntitySet="Narudzbe" />
+      <End Role="Izlazi" EntitySet="Izlazi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IzlazStavke_Izlazi" Association="ProdajaNekretninaModel.FK_IzlazStavke_Izlazi">
+      <End Role="Izlazi" EntitySet="Izlazi" />
+      <End Role="IzlazStavke" EntitySet="IzlazStavke" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Narudzbe_SelectAll" ReturnType="Collection(ProdajaNekretninaModel.esp_Narudzbe_SelectAll_Result)" />
+    <EntitySet Name="Potraznja" EntityType="ProdajaNekretninaModel.Potraznja" />
+    <AssociationSet Name="FK__Potraznja__GradI__05A3D694" Association="ProdajaNekretninaModel.FK__Potraznja__GradI__05A3D694">
+      <End Role="Gradovi" EntitySet="Gradovi" />
+      <End Role="Potraznja" EntitySet="Potraznja" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Potraznja__Nekre__078C1F06" Association="ProdajaNekretninaModel.FK__Potraznja__Nekre__078C1F06">
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+      <End Role="Potraznja" EntitySet="Potraznja" />
+    </AssociationSet>
+    <FunctionImport Name="esp_PotraznjaInsert">
+      <Parameter Name="KID" Mode="In" Type="Int32" />
+      <Parameter Name="Grad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_PotraznjaSelectAll" EntitySet="Nekretnine" ReturnType="Collection(ProdajaNekretninaModel.Nekretnine)">
+      <Parameter Name="GradID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_PotraznjaKorisniciEmail" ReturnType="Collection(String)">
+      <Parameter Name="G" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_IzlaziByDatum" ReturnType="Collection(ProdajaNekretninaModel.esp_IzlaziByDatum_Result1)">
+      <Parameter Name="DatumOD" Mode="In" Type="DateTime" />
+      <Parameter Name="DatumDO" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <AssociationSet Name="FK_Potraznja_Kupci" Association="ProdajaNekretninaModel.FK_Potraznja_Kupci">
+      <End Role="Kupci" EntitySet="Kupci" />
+      <End Role="Potraznja" EntitySet="Potraznja" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Narudzba_Insert_Izlaz_Stavka">
+      <Parameter Name="IzlazID" Mode="In" Type="Int32" />
+      <Parameter Name="NekretninaID" Mode="In" Type="Int32" />
+      <Parameter Name="Kolicina" Mode="In" Type="Int32" />
+      <Parameter Name="Cijena" Mode="In" Type="Decimal" />
+      <Parameter Name="Popust" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Izlazi_Ugovor" ReturnType="Collection(ProdajaNekretninaModel.esp_Izlazi_Ugovor_Result)">
+      <Parameter Name="IzlazID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Izlazi_Ugovor1" ReturnType="Collection(ProdajaNekretninaModel.esp_Izlazi_Ugovor1_Result)">
+      <Parameter Name="IzlazID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Izlazi_Zakljuci">
+      <Parameter Name="IzlazID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Narudzba_GetByDate" ReturnType="Collection(ProdajaNekretninaModel.esp_Narudzba_GetByDate_Result1)">
+      <Parameter Name="dat" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="JavnaPitanja" EntityType="ProdajaNekretninaModel.JavnaPitanja" />
+    <AssociationSet Name="FK_JavnaPitanja_Nekretnine" Association="ProdajaNekretninaModel.FK_JavnaPitanja_Nekretnine">
+      <End Role="Nekretnine" EntitySet="Nekretnine" />
+      <End Role="JavnaPitanja" EntitySet="JavnaPitanja" />
+    </AssociationSet>
+    <FunctionImport Name="esp_Pitanja_InsertPitanje">
+      <Parameter Name="NekretninaID" Mode="In" Type="Int32" />
+      <Parameter Name="Pitanje" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Pitanja_SelectAll" EntitySet="JavnaPitanja" ReturnType="Collection(ProdajaNekretninaModel.JavnaPitanja)">
+      <Parameter Name="NekretninaID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Pitanja_InsertOdgovor">
+      <Parameter Name="pitanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="odgovor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Pitanja_SelectNeodgovorenaByKorID" ReturnType="Collection(ProdajaNekretninaModel.esp_Pitanja_SelectNeodgovorenaByKorID_Result1)">
+      <Parameter Name="KorID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_DeleteKorisniciUloge">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_All" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_All_Result)" />
+    <FunctionImport Name="esp_Nekretnine_SelectProdajaNEW" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectProdajaNEW_Result)">
+      <Parameter Name="kategorijaID" Mode="In" Type="Int32" />
+      <Parameter Name="kantonID" Mode="In" Type="Int32" />
+      <Parameter Name="stanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="cijenaOD" Mode="In" Type="Double" />
+      <Parameter Name="cijenaDO" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_SelectProdajaPage" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectProdajaPage_Result)">
+      <Parameter Name="kategorijaID" Mode="In" Type="Int32" />
+      <Parameter Name="kantonID" Mode="In" Type="Int32" />
+      <Parameter Name="stanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="cijenaOD" Mode="In" Type="Double" />
+      <Parameter Name="cijenaDO" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnine_SelectIznajmljivanjePage" ReturnType="Collection(ProdajaNekretninaModel.esp_Nekretnine_SelectIznajmljivanjePage_Result)">
+      <Parameter Name="kategorijaID" Mode="In" Type="Int32" />
+      <Parameter Name="kantonID" Mode="In" Type="Int32" />
+      <Parameter Name="stanjeID" Mode="In" Type="Int32" />
+      <Parameter Name="cijenaOD" Mode="In" Type="Double" />
+      <Parameter Name="cijenaDO" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Nekretnina_UpdateStatus">
+      <Parameter Name="nel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_Izlazi_SelAll" ReturnType="Collection(ProdajaNekretninaModel.esp_Izlazi_SelAll_Result)" />
+    <FunctionImport Name="esp_NekretninaIDByIzlaz" ReturnType="Collection(Int32)">
+      <Parameter Name="izId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="esp_IDNEKT" ReturnType="Collection(Int32)">
+      <Parameter Name="izId" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="esp_Korisnici_SelectByName_Result">
+    <Property Type="Int32" Name="KorisnikID" Nullable="false" />
+    <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <Property Type="Int32" Name="BrojUloga" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Gradovi">
+    <Key>
+      <PropertyRef Name="GradID" />
+    </Key>
+    <Property Name="GradID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazivGarda" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="KantonID" Type="Int32" />
+    <NavigationProperty Name="Kantoni" Relationship="ProdajaNekretninaModel.FK_Gradovi_Kantoni" FromRole="Gradovi" ToRole="Kantoni" />
+    <NavigationProperty Name="Potraznja" Relationship="ProdajaNekretninaModel.FK__Potraznja__GradI__05A3D694" FromRole="Gradovi" ToRole="Potraznja" />
+  </EntityType>
+  <EntityType Name="Kantoni">
+    <Key>
+      <PropertyRef Name="KantonID" />
+    </Key>
+    <Property Name="KantonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naziv" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Gradovi" Relationship="ProdajaNekretninaModel.FK_Gradovi_Kantoni" FromRole="Kantoni" ToRole="Gradovi" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Kantoni" FromRole="Kantoni" ToRole="Nekretnine" />
+  </EntityType>
+  <Association Name="FK_Gradovi_Kantoni">
+    <End Type="ProdajaNekretninaModel.Kantoni" Role="Kantoni" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Gradovi" Role="Gradovi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kantoni">
+        <PropertyRef Name="KantonID" />
+      </Principal>
+      <Dependent Role="Gradovi">
+        <PropertyRef Name="KantonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="esp_Nekretnine_PretragaAdmin_Result">
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectZadnjeDodane_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectProdaja_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectPotraznja_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectZadnjeDodaneProdaja_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectZadnjeDodaneIznajmljivanje_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectIznajmljivanje_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <EntityType Name="Nekretnine">
+    <Key>
+      <PropertyRef Name="NekretninaID" />
+    </Key>
+    <Property Name="NekretninaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VrstaID" Type="Int32" />
+    <Property Name="KategorijaID" Type="Int32" />
+    <Property Name="KantonID" Type="Int32" />
+    <Property Name="SobeID" Type="Int32" />
+    <Property Name="SpratID" Type="Int32" />
+    <Property Name="GrijanjeID" Type="Int32" />
+    <Property Name="StanjeID" Type="Int32" />
+    <Property Name="KorisnikID" Type="Int32" />
+    <Property Name="Naslov" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BrojKvadrata" Type="Int32" />
+    <Property Name="Adresa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cijena" Type="Double" />
+    <Property Name="GodinaIzgradnje" Type="Int32" />
+    <Property Name="Voda" Type="Boolean" />
+    <Property Name="Struja" Type="Boolean" />
+    <Property Name="Knalizacija" Type="Boolean" />
+    <Property Name="Uknjiženo" Type="Boolean" />
+    <Property Name="Parking" Type="Boolean" />
+    <Property Name="Lift" Type="Boolean" />
+    <Property Name="Namješten" Type="Boolean" />
+    <Property Name="Internet" Type="Boolean" />
+    <Property Name="Novogradnja" Type="Boolean" />
+    <Property Name="NedavnoAdaptiran" Type="Boolean" />
+    <Property Name="Garaža" Type="Boolean" />
+    <Property Name="Telefon" Type="Boolean" />
+    <Property Name="SlikaThumb" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DatumObjave" Type="DateTime" Precision="3" />
+    <Property Name="BrojPosjeta" Type="Int32" />
+    <Property Name="Aktivna" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="IzlazStavke" Relationship="ProdajaNekretninaModel.FK_IzlazStavke_Proizvodi" FromRole="Nekretnine" ToRole="IzlazStavke" />
+    <NavigationProperty Name="Kantoni" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Kantoni" FromRole="Nekretnine" ToRole="Kantoni" />
+    <NavigationProperty Name="Kategorije" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Kategorije" FromRole="Nekretnine" ToRole="Kategorije" />
+    <NavigationProperty Name="Kupci" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Kupci" FromRole="Nekretnine" ToRole="Kupci" />
+    <NavigationProperty Name="NarudzbaStavke" Relationship="ProdajaNekretninaModel.FK_NarudzbaStavke_Proizvodi" FromRole="Nekretnine" ToRole="NarudzbaStavke" />
+    <NavigationProperty Name="Sobe" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Sobe" FromRole="Nekretnine" ToRole="Sobe" />
+    <NavigationProperty Name="Spratovi" Relationship="ProdajaNekretninaModel.FK_Nekretnine_Spratovi" FromRole="Nekretnine" ToRole="Spratovi" />
+    <NavigationProperty Name="StanjaNekretnina" Relationship="ProdajaNekretninaModel.FK_Nekretnine_StanjaNekretnina" FromRole="Nekretnine" ToRole="StanjaNekretnina" />
+    <NavigationProperty Name="TipGrijanja" Relationship="ProdajaNekretninaModel.FK_Nekretnine_TipGrijanja" FromRole="Nekretnine" ToRole="TipGrijanja" />
+    <NavigationProperty Name="VrsteProdaje" Relationship="ProdajaNekretninaModel.FK_Nekretnine_VrsteProdaje" FromRole="Nekretnine" ToRole="VrsteProdaje" />
+    <NavigationProperty Name="Ocjene" Relationship="ProdajaNekretninaModel.FK_Ocjene_Proizvodi" FromRole="Nekretnine" ToRole="Ocjene" />
+    <NavigationProperty Name="SlikeNekretnina" Relationship="ProdajaNekretninaModel.FK_SlikeNekretnina_Nekretnine" FromRole="Nekretnine" ToRole="SlikeNekretnina" />
+    <NavigationProperty Name="Potraznja" Relationship="ProdajaNekretninaModel.FK__Potraznja__Nekre__078C1F06" FromRole="Nekretnine" ToRole="Potraznja" />
+    <NavigationProperty Name="JavnaPitanja" Relationship="ProdajaNekretninaModel.FK_JavnaPitanja_Nekretnine" FromRole="Nekretnine" ToRole="JavnaPitanja" />
+  </EntityType>
+  <Association Name="FK_IzlazStavke_Proizvodi">
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="1" />
+    <End Type="ProdajaNekretninaModel.IzlazStavke" Role="IzlazStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nekretnine">
+        <PropertyRef Name="NekretninaID" />
+      </Principal>
+      <Dependent Role="IzlazStavke">
+        <PropertyRef Name="NekretninaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nekretnine_Kantoni">
+    <End Type="ProdajaNekretninaModel.Kantoni" Role="Kantoni" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kantoni">
+        <PropertyRef Name="KantonID" />
+      </Principal>
+      <Dependent Role="Nekretnine">
+        <PropertyRef Name="KantonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nekretnine_Kategorije">
+    <End Type="ProdajaNekretninaModel.Kategorije" Role="Kategorije" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategorije">
+        <PropertyRef Name="KategorijaID" />
+      </Principal>
+      <Dependent Role="Nekretnine">
+        <PropertyRef Name="KategorijaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nekretnine_Kupci">
+    <End Type="ProdajaNekretninaModel.Kupci" Role="Kupci" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Nekretnine">
+        <PropertyRef Name="KorisnikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NarudzbaStavke_Proizvodi">
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="1" />
+    <End Type="ProdajaNekretninaModel.NarudzbaStavke" Role="NarudzbaStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nekretnine">
+        <PropertyRef Name="NekretninaID" />
+      </Principal>
+      <Dependent Role="NarudzbaStavke">
+        <PropertyRef Name="NekretninaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nekretnine_Sobe">
+    <End Type="ProdajaNekretninaModel.Sobe" Role="Sobe" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sobe">
+        <PropertyRef Name="SobaID" />
+      </Principal>
+      <Dependent Role="Nekretnine">
+        <PropertyRef Name="SobeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nekretnine_Spratovi">
+    <End Type="ProdajaNekretninaModel.Spratovi" Role="Spratovi" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Spratovi">
+        <PropertyRef Name="SpratID" />
+      </Principal>
+      <Dependent Role="Nekretnine">
+        <PropertyRef Name="SpratID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nekretnine_StanjaNekretnina">
+    <End Type="ProdajaNekretninaModel.StanjaNekretnina" Role="StanjaNekretnina" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StanjaNekretnina">
+        <PropertyRef Name="StanjeID" />
+      </Principal>
+      <Dependent Role="Nekretnine">
+        <PropertyRef Name="StanjeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nekretnine_TipGrijanja">
+    <End Type="ProdajaNekretninaModel.TipGrijanja" Role="TipGrijanja" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipGrijanja">
+        <PropertyRef Name="GrijanjeID" />
+      </Principal>
+      <Dependent Role="Nekretnine">
+        <PropertyRef Name="GrijanjeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Nekretnine_VrsteProdaje">
+    <End Type="ProdajaNekretninaModel.VrsteProdaje" Role="VrsteProdaje" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VrsteProdaje">
+        <PropertyRef Name="VrstaID" />
+      </Principal>
+      <Dependent Role="Nekretnine">
+        <PropertyRef Name="VrstaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ocjene_Proizvodi">
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="1" />
+    <End Type="ProdajaNekretninaModel.Ocjene" Role="Ocjene" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nekretnine">
+        <PropertyRef Name="NekretninaID" />
+      </Principal>
+      <Dependent Role="Ocjene">
+        <PropertyRef Name="NekretninaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SlikeNekretnina_Nekretnine">
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.SlikeNekretnina" Role="SlikeNekretnina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nekretnine">
+        <PropertyRef Name="NekretninaID" />
+      </Principal>
+      <Dependent Role="SlikeNekretnina">
+        <PropertyRef Name="NekretninaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="esp_Nekretnine_SelectByKupac_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="naslov" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_TOP3_Result">
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <EntityType Name="Izlazi">
+    <Key>
+      <PropertyRef Name="IzlazID" />
+    </Key>
+    <Property Name="IzlazID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrojRacuna" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="KorisnikID" Type="Int32" Nullable="false" />
+    <Property Name="Zakljucen" Type="Boolean" Nullable="false" />
+    <Property Name="IznosBezPDV" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IznosSaPDV" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="NarudzbaID" Type="Int32" />
+    <NavigationProperty Name="Korisnici" Relationship="ProdajaNekretninaModel.FK_Izlazi_Korisnici" FromRole="Izlazi" ToRole="Korisnici" />
+    <NavigationProperty Name="Narudzbe" Relationship="ProdajaNekretninaModel.FK_Izlazi_Narudzbe" FromRole="Izlazi" ToRole="Narudzbe" />
+    <NavigationProperty Name="IzlazStavke" Relationship="ProdajaNekretninaModel.FK_IzlazStavke_Izlazi" FromRole="Izlazi" ToRole="IzlazStavke" />
+  </EntityType>
+  <Association Name="FK_Izlazi_Korisnici">
+    <End Type="ProdajaNekretninaModel.Korisnici" Role="Korisnici" Multiplicity="1" />
+    <End Type="ProdajaNekretninaModel.Izlazi" Role="Izlazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnici">
+        <PropertyRef Name="KorisnikID" />
+      </Principal>
+      <Dependent Role="Izlazi">
+        <PropertyRef Name="KorisnikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Izlazi_Narudzbe">
+    <End Type="ProdajaNekretninaModel.Narudzbe" Role="Narudzbe" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Izlazi" Role="Izlazi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Narudzbe">
+        <PropertyRef Name="NarudzbaID" />
+      </Principal>
+      <Dependent Role="Izlazi">
+        <PropertyRef Name="NarudzbaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IzlazStavke_Izlazi">
+    <End Type="ProdajaNekretninaModel.Izlazi" Role="Izlazi" Multiplicity="1" />
+    <End Type="ProdajaNekretninaModel.IzlazStavke" Role="IzlazStavke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Izlazi">
+        <PropertyRef Name="IzlazID" />
+      </Principal>
+      <Dependent Role="IzlazStavke">
+        <PropertyRef Name="IzlazID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="esp_Narudzbe_SelectAll_Result">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <Property Type="String" Name="ImePrezime" Nullable="false" MaxLength="101" />
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Potraznja">
+    <Key>
+      <PropertyRef Name="PotraznjaID" />
+    </Key>
+    <Property Name="PotraznjaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GradID" Type="Int32" Nullable="false" />
+    <Property Name="NekretninaID" Type="Int32" />
+    <NavigationProperty Name="Gradovi" Relationship="ProdajaNekretninaModel.FK__Potraznja__GradI__05A3D694" FromRole="Potraznja" ToRole="Gradovi" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK__Potraznja__Nekre__078C1F06" FromRole="Potraznja" ToRole="Nekretnine" />
+    <Property Name="KupacID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Kupci" Relationship="ProdajaNekretninaModel.FK_Potraznja_Kupci" FromRole="Potraznja" ToRole="Kupci" />
+  </EntityType>
+  <Association Name="FK__Potraznja__GradI__05A3D694">
+    <End Type="ProdajaNekretninaModel.Gradovi" Role="Gradovi" Multiplicity="1" />
+    <End Type="ProdajaNekretninaModel.Potraznja" Role="Potraznja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gradovi">
+        <PropertyRef Name="GradID" />
+      </Principal>
+      <Dependent Role="Potraznja">
+        <PropertyRef Name="GradID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Potraznja__Nekre__078C1F06">
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="0..1" />
+    <End Type="ProdajaNekretninaModel.Potraznja" Role="Potraznja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nekretnine">
+        <PropertyRef Name="NekretninaID" />
+      </Principal>
+      <Dependent Role="Potraznja">
+        <PropertyRef Name="NekretninaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="esp_PotraznjaSelectAll_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="Int32" Name="VrstaID" Nullable="true" />
+    <Property Type="Int32" Name="KategorijaID" Nullable="true" />
+    <Property Type="Int32" Name="KantonID" Nullable="true" />
+    <Property Type="Int32" Name="SobeID" Nullable="true" />
+    <Property Type="Int32" Name="SpratID" Nullable="true" />
+    <Property Type="Int32" Name="GrijanjeID" Nullable="true" />
+    <Property Type="Int32" Name="StanjeID" Nullable="true" />
+    <Property Type="Int32" Name="KorisnikID" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Voda" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Uknjiženo" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Boolean" Name="Telefon" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="esp_IzlaziByDatum_Result">
+    <Property Type="String" Name="BrojRacuna" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Kolicina" Nullable="true" />
+    <Property Type="Double" Name="Cijena1" Nullable="true" />
+    <Property Type="Decimal" Name="Iznos" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="esp_IzlaziByDatum_Result1">
+    <Property Type="String" Name="BrojRacuna" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Kolicina" Nullable="true" />
+    <Property Type="Decimal" Name="Iznos" Nullable="true" Precision="38" Scale="2" />
+  </ComplexType>
+  <Association Name="FK_Potraznja_Kupci">
+    <End Type="ProdajaNekretninaModel.Kupci" Role="Kupci" Multiplicity="1" />
+    <End Type="ProdajaNekretninaModel.Potraznja" Role="Potraznja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kupci">
+        <PropertyRef Name="KupacID" />
+      </Principal>
+      <Dependent Role="Potraznja">
+        <PropertyRef Name="KupacID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="esp_Izlazi_Ugovor_Result">
+    <Property Type="Int32" Name="IzlazID" Nullable="false" />
+    <Property Type="String" Name="BrojRacuna" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="KorisnikID" Nullable="false" />
+    <Property Type="Boolean" Name="Zakljucen" Nullable="false" />
+    <Property Type="Decimal" Name="IznosBezPDV" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="IznosSaPDV" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="NarudzbaID" Nullable="true" />
+    <Property Type="Int32" Name="IzlazStavkaID" Nullable="false" />
+    <Property Type="Int32" Name="IzlazID1" Nullable="false" />
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="Int32" Name="Kolicina" Nullable="false" />
+    <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Popust" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="Int32" Name="NekretninaID1" Nullable="false" />
+    <Property Type="Int32" Name="VrstaID" Nullable="true" />
+    <Property Type="Int32" Name="KategorijaID" Nullable="true" />
+    <Property Type="Int32" Name="KantonID" Nullable="true" />
+    <Property Type="Int32" Name="SobeID" Nullable="true" />
+    <Property Type="Int32" Name="SpratID" Nullable="true" />
+    <Property Type="Int32" Name="GrijanjeID" Nullable="true" />
+    <Property Type="Int32" Name="StanjeID" Nullable="true" />
+    <Property Type="Int32" Name="KorisnikID1" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Double" Name="Cijena1" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Voda" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Uknjiženo" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Boolean" Name="Telefon" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="KorisnikID2" Nullable="false" />
+    <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Telefon1" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="KorisnickoIme" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LozinkaHash" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LozinkaSalt" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="esp_Izlazi_Ugovor1_Result">
+    <Property Type="Int32" Name="IzlazID" Nullable="false" />
+    <Property Type="String" Name="BrojRacuna" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="IznosBezPDV" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="IznosSaPDV" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Cijena" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Kolicina" Nullable="false" />
+    <Property Type="Decimal" Name="Popust" Nullable="true" Precision="5" Scale="2" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="Boolean" Name="Uknjiženo" Nullable="true" />
+    <Property Type="String" Name="Ime" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Prezime" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="esp_Narudzba_GetByDate_Result">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="KupacID" Nullable="false" />
+    <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <Property Type="Boolean" Name="Otkazano" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="esp_Narudzba_GetByDate_Result1">
+    <Property Type="Int32" Name="NarudzbaID" Nullable="false" />
+    <Property Type="String" Name="BrojNarudzbe" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="Status" Nullable="false" />
+    <Property Type="String" Name="ImePrezime" Nullable="false" MaxLength="101" />
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="JavnaPitanja">
+    <Key>
+      <PropertyRef Name="PitanjeID" />
+    </Key>
+    <Property Name="PitanjeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NekretninaID" Type="Int32" Nullable="false" />
+    <Property Name="Pitanje" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Odgovor" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="Odgovoreno" Type="Boolean" />
+    <NavigationProperty Name="Nekretnine" Relationship="ProdajaNekretninaModel.FK_JavnaPitanja_Nekretnine" FromRole="JavnaPitanja" ToRole="Nekretnine" />
+  </EntityType>
+  <Association Name="FK_JavnaPitanja_Nekretnine">
+    <End Type="ProdajaNekretninaModel.Nekretnine" Role="Nekretnine" Multiplicity="1" />
+    <End Type="ProdajaNekretninaModel.JavnaPitanja" Role="JavnaPitanja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nekretnine">
+        <PropertyRef Name="NekretninaID" />
+      </Principal>
+      <Dependent Role="JavnaPitanja">
+        <PropertyRef Name="NekretninaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="esp_Pitanja_SelectAll_Result">
+    <Property Type="Int32" Name="PitanjeID" Nullable="false" />
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Pitanje" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Odgovor" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="Odgovoreno" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="esp_Pitanja_SelectNeodgovorenaByKorID_Result">
+    <Property Type="Int32" Name="PitanjeID" Nullable="false" />
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Pitanje" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Odgovor" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="Odgovoreno" Nullable="true" />
+    <Property Type="Int32" Name="NekretninaID1" Nullable="false" />
+    <Property Type="Int32" Name="VrstaID" Nullable="true" />
+    <Property Type="Int32" Name="KategorijaID" Nullable="true" />
+    <Property Type="Int32" Name="KantonID" Nullable="true" />
+    <Property Type="Int32" Name="SobeID" Nullable="true" />
+    <Property Type="Int32" Name="SpratID" Nullable="true" />
+    <Property Type="Int32" Name="GrijanjeID" Nullable="true" />
+    <Property Type="Int32" Name="StanjeID" Nullable="true" />
+    <Property Type="Int32" Name="KorisnikID" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Voda" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Uknjiženo" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Boolean" Name="Telefon" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="esp_Pitanja_SelectNeodgovorenaByKorID_Result1">
+    <Property Type="Int32" Name="PitanjeID" Nullable="false" />
+    <Property Type="String" Name="Pitanje" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_All_Result">
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectProdajaNEW_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectProdajaPage_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Nekretnine_SelectIznajmljivanjePage_Result">
+    <Property Type="Int32" Name="NekretninaID" Nullable="false" />
+    <Property Type="String" Name="Adresa" Nullable="true" />
+    <Property Type="Boolean" Name="Aktivna" Nullable="false" />
+    <Property Type="Int32" Name="BrojKvadrata" Nullable="true" />
+    <Property Type="Int32" Name="BrojPosjeta" Nullable="true" />
+    <Property Type="Double" Name="Cijena" Nullable="true" />
+    <Property Type="DateTime" Name="DatumObjave" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Garaža" Nullable="true" />
+    <Property Type="Int32" Name="GodinaIzgradnje" Nullable="true" />
+    <Property Type="Boolean" Name="Internet" Nullable="true" />
+    <Property Type="Boolean" Name="Knalizacija" Nullable="true" />
+    <Property Type="Boolean" Name="Lift" Nullable="true" />
+    <Property Type="Boolean" Name="Namješten" Nullable="true" />
+    <Property Type="String" Name="Naslov" Nullable="true" MaxLength="250" />
+    <Property Type="Boolean" Name="NedavnoAdaptiran" Nullable="true" />
+    <Property Type="Boolean" Name="Novogradnja" Nullable="true" />
+    <Property Type="Boolean" Name="Parking" Nullable="true" />
+    <Property Type="Binary" Name="SlikaThumb" Nullable="true" />
+    <Property Type="Boolean" Name="Struja" Nullable="true" />
+    <Property Type="String" Name="NazivGrijanja" Nullable="true" />
+    <Property Type="String" Name="NazivKategorije" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="BrojSoba" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="NazivSprata" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivStanja" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NazivVrste" Nullable="true" />
+    <Property Type="String" Name="Naziv" Nullable="true" />
+    <Property Type="String" Name="NazivGarda" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="esp_Izlazi_SelAll_Result">
+    <Property Type="String" Name="BrojRacuna" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Datum" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="IznosBezPDV" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="IznosSaPDV" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="Zakljucen" Nullable="false" />
+    <Property Type="Int32" Name="IzlazID" Nullable="false" />
+  </ComplexType>
+</Schema>

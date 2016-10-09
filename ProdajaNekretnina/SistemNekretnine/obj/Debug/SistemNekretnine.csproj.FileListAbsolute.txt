@@ -1,0 +1,56 @@
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll.config
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.pdb
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.dll
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.xml
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.csprojResolveAssemblyReference.cache
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.dll
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll.config
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.xml
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.csprojResolveAssemblyReference.cache
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll.config
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.xml
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll.config
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.pdb
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.dll
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.pdb
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.csprojResolveAssemblyReference.cache
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll.config
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.pdb
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.dll
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.xml
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.dll
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.pdb
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.csprojResolveAssemblyReference.cache
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll.config
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.dll
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.xml
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.csprojResolveAssemblyReference.cache
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll.config
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\SistemNekretnine\bin\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.dll
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\SistemNekretnine\bin\Debug\EntityFramework.xml
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\SistemNekretnine\obj\Debug\SistemNekretnine.csprojResolveAssemblyReference.cache

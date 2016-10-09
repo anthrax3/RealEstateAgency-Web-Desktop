@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc4f21dfd1054d789b0d4f00506b37e5" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.IzlazStavke" Width="1.5" PointX="5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Kategorije" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Korisnici" Width="1.5" PointX="6.875" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.KorisniciUloge" Width="1.5" PointX="6.875" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Kupci" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.NarudzbaStavke" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Narudzbe" Width="1.5" PointX="6.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Ocjene" Width="1.5" PointX="3.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.SlikeNekretnina" Width="1.5" PointX="5.25" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Sobe" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Spratovi" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.StanjaNekretnina" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.TipGrijanja" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Uloge" Width="1.5" PointX="4.375" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.VrsteProdaje" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_KorisniciUloge_Korisnici" ManuallyRouted="false" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_KorisniciUloge_Uloge" ManuallyRouted="false" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Narudzbe_Kupci" ManuallyRouted="false" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Ocjene_Kupci" ManuallyRouted="false" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_NarudzbaStavke_Narudzbe" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Gradovi" Width="1.5" PointX="1.625" PointY="1.25" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Kantoni" Width="1.5" PointX="2.875" PointY="7.375" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Gradovi_Kantoni" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Nekretnine" Width="1.5" PointX="10" PointY="9" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_IzlazStavke_Proizvodi" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Nekretnine_Kantoni" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Nekretnine_Kategorije" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Nekretnine_Kupci" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_NarudzbaStavke_Proizvodi" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Nekretnine_Sobe" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Nekretnine_Spratovi" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Nekretnine_StanjaNekretnina" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Nekretnine_TipGrijanja" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Nekretnine_VrsteProdaje" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Ocjene_Proizvodi" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_SlikeNekretnina_Nekretnine" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Izlazi" Width="1.5" PointX="11.125" PointY="5" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Izlazi_Korisnici" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Izlazi_Narudzbe" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_IzlazStavke_Izlazi" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.Potraznja" Width="1.5" PointX="12.25" PointY="9.625" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK__Potraznja__GradI__05A3D694" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK__Potraznja__Nekre__078C1F06" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_Potraznja_Kupci" />
+        <EntityTypeShape EntityType="ProdajaNekretninaModel.JavnaPitanja" Width="1.5" PointX="12.25" PointY="13.625" />
+        <AssociationConnector Association="ProdajaNekretninaModel.FK_JavnaPitanja_Nekretnine" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterStranica.master.cs" Inherits="ProdajaNekretnina.MasterStranica" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Prodaja nekretnina</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/grid_12.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/slider.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/jqtransform.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/galerija/all.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/galerija/prettyPhoto.css" />
+
+    <script src="/js/jquery-1.7.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <script src="/js/cufon-yui.js"></script>
+    <script src="/js/vegur_400.font.js"></script>
+    <script src="/js/Vegur_bold_700.font.js"></script>
+    <script src="/js/cufon-replace.js"></script>
+    <script src="/js/tms-0.4.x.js"></script>
+    <script src="/js/jquery.jqtransform.js"></script>
+    <script src="/js/FF-cash.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.form-1').jqTransform();
+            $('.slider')._TMS({
+                show: 0,
+                pauseOnHover: true,
+                prevBu: '.prev',
+                nextBu: '.next',
+                playBu: false,
+                duration: 1000,
+                preset: 'fade',
+                pagination: true,
+                pagNums: false,
+                slideshow: 7000,
+                numStatus: false,
+                banners: false,
+                waitBannerAnimation: false,
+                progressBar: false
+            })
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="main">
+            <!--==============================header=================================-->
+            <header>
+                <div>
+                    <h1><a href="index.html">
+                        <img src="/images/logo.jpg" alt="" /></a></h1>
+                    <div class="social-icons">
+                        <asp:LinkButton ID="btnKorisnicki" runat="server" CssClass="icon-3" OnClick="btnKorisnicki_Click" CausesValidation="False"></asp:LinkButton>
+                        
+                        <asp:LinkButton ID="btnRegistracija" runat="server" CssClass="icon-2"  OnClick="btnRegistracija_Click" CausesValidation="False"></asp:LinkButton>
+                        <asp:LinkButton ID="btnLogin" runat="server" CssClass="icon-1" OnClick="btnLogin_Click" CausesValidation="False"></asp:LinkButton>
+                        
+                    </div>
+                    <div id="slide">
+                        <div class="slider">
+                            <ul class="items">
+                                <li>
+                                    <img src="/images/slider-1.jpg" alt="" /></li>
+                                <li>
+                                    <img src="/images/slider-2.jpg" alt="" /></li>
+                                <li>
+                                    <img src="/images/slider-3.jpg" alt="" /></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="prev"></a><a href="#" class="next"></a>
+                    </div>
+                    <nav>
+                        <ul class="menu">
+                            <li class="current"><a href="/Naslovna.aspx">Naslovna</a></li>
+                            <li><a href="/Potražnja.aspx">Pretraga</a></li>
+                            <li><a href="/Prodaja.aspx">Prodaja</a></li>
+                            <li><a href="/Iznajmljivanje.aspx">Iznajmljivanje</a></li>
+                            <li><a href="/KorisniciSistema/Objava.aspx">Objavi</a></li>
+                             <li  id="fooItem" runat="server"><a href="/PotragaPoGradu.aspx">Potraznja</a></li>
+                            <li><asp:HyperLink ID="linkKorpa" runat="server" NavigateUrl="/KorisniciSistema/Korpa.aspx">Korpa</asp:HyperLink></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <!--==============================content================================-->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--==============================footer=================================-->
+        <footer>
+            <p>© 2012 Real Estate</p>
+            <p>Website Template by <a href="http://www.templatemonster.com/" target="_blank" rel="nofollow">www.templatemonster</a></p>
+        </footer>
+        <script>
+            Cufon.now();
+        </script>
+    </form>
+</body>
+</html>

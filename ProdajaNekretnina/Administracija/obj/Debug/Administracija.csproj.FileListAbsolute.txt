@@ -1,0 +1,187 @@
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe.config
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\bin\Debug\Administracija.pdb
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.dll
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.dll
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.pdb
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.xml
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csprojResolveAssemblyReference.cache
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.LoginForma.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Poruke.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Properties.Resources.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csproj.GenerateResource.Cache
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.exe
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.pdb
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.GlavnaForma.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Korisnici.NoviKorisnik.resources
+C:\Users\Adnan\Documents\Visual Studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.PretragaKorisnika.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaLicnihPodataka.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaStatusnihPodataka.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.NovaNekretnina.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.PregledNekretnina.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.PregledNarudzbi.resources
+C:\Users\Adnan\documents\visual studio 2013\Projects\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.ZakljuciNaruzbu.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe.config
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.exe
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\Administracija.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.xml
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csprojResolveAssemblyReference.cache
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.GlavnaForma.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.ProdajaNekretnina.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaLicnihPodataka.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaStatusnihPodataka.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Korisnici.NoviKorisnik.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.LoginForma.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Poruke.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Properties.Resources.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.PretragaKorisnika.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.PregledNarudzbi.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.ZakljuciNaruzbu.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.NovaNekretnina.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.PregledNekretnina.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csproj.GenerateResource.Cache
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.cache
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI (1)\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.compiled
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe.config
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\Administracija.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.dll
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.xml
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csprojResolveAssemblyReference.cache
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.GlavnaForma.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.ProdajaNekretnina.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaLicnihPodataka.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaStatusnihPodataka.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Korisnici.NoviKorisnik.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.LoginForma.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Poruke.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Properties.Resources.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.PretragaKorisnika.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.PregledNarudzbi.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.ZakljuciNaruzbu.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.NovaNekretnina.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.PregledNekretnina.resources
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csproj.GenerateResource.Cache
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.cache
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.compiled
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.exe
+C:\Users\ermin_000\Desktop\Nekretnine_SEMINARSKI\Nekretnine_SEMINARSKI\ProdajaNekretnina\Administracija\obj\Debug\Administracija.pdb
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe.config
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.exe
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.pdb
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.pdb
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.dll
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.pdb
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.GlavnaForma.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.ProdajaNekretnina.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaLicnihPodataka.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaStatusnihPodataka.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Korisnici.NoviKorisnik.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.LoginForma.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Poruke.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Properties.Resources.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.PretragaKorisnika.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.PregledNarudzbi.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.ZakljuciNaruzbu.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.NovaNekretnina.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.PregledNekretnina.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csproj.GenerateResource.Cache
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.cache
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.compiled
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.Izlazi.resources
+C:\Users\DELL\Desktop\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.Ugovor.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe.config
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.exe
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.pdb
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.pdb
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.dll
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.dll
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.pdb
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.xml
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csprojResolveAssemblyReference.cache
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.GlavnaForma.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.Izlazi.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.ProdajaNekretnina.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.Ugovor.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaLicnihPodataka.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaStatusnihPodataka.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Korisnici.NoviKorisnik.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.LoginForma.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Poruke.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Properties.Resources.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.PretragaKorisnika.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.PregledNarudzbi.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.ZakljuciNaruzbu.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.NovaNekretnina.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.PregledNekretnina.resources
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csproj.GenerateResource.Cache
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.cache
+D:\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.compiled
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe.config
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.exe
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.pdb
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\Administracija.pdb
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.dll
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.xml
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csprojResolveAssemblyReference.cache
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.GlavnaForma.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.Izlazi.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.ProdajaNekretnina.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.Ugovor.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaLicnihPodataka.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaStatusnihPodataka.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Korisnici.NoviKorisnik.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.LoginForma.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Poruke.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Properties.Resources.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.PretragaKorisnika.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.PregledNarudzbi.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.ZakljuciNaruzbu.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.NovaNekretnina.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.PregledNekretnina.resources
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csproj.GenerateResource.Cache
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.cache
+C:\Users\ermin_000\Desktop\Agencija-za-Promet-Nekretninama\Agencija za Promet Nekretninama\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.compiled
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe.config
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\bin\Debug\Administracija.exe
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\bin\Debug\Administracija.pdb
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.dll
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.dll
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\bin\Debug\SistemNekretnine.pdb
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\bin\Debug\EntityFramework.xml
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csprojResolveAssemblyReference.cache
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.GlavnaForma.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.Izlazi.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.ProdajaNekretnina.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Izvjestaji.Ugovor.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaLicnihPodataka.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.IzmjenaStatusnihPodataka.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Korisnici.NoviKorisnik.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.LoginForma.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Poruke.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.Properties.Resources.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempKorisnici.PretragaKorisnika.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.PregledNarudzbi.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNarudzbe.ZakljuciNaruzbu.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.NovaNekretnina.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.TempNekretnine.PregledNekretnina.resources
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.csproj.GenerateResource.Cache
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.cache
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\RdlCompile.compiled
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.exe
+C:\Users\ermin_000\SkyDrive\APN\APN\ProdajaNekretnina\Administracija\obj\Debug\Administracija.pdb

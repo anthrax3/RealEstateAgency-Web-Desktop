@@ -1,0 +1,857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProdajaNekretninaModelStoreContainer" CdmEntityContainer="ProdajaNekretninaEntities">
+    <EntitySetMapping Name="IzlazStavke">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.IzlazStavke">
+        <MappingFragment StoreEntitySet="IzlazStavke">
+          <ScalarProperty Name="IzlazStavkaID" ColumnName="IzlazStavkaID" />
+          <ScalarProperty Name="IzlazID" ColumnName="IzlazID" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Popust" ColumnName="Popust" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategorije">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Kategorije">
+        <MappingFragment StoreEntitySet="Kategorije">
+          <ScalarProperty Name="KategorijaID" ColumnName="KategorijaID" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korisnici">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Korisnici">
+        <MappingFragment StoreEntitySet="Korisnici">
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+          <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+          <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KorisniciUloge">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.KorisniciUloge">
+        <MappingFragment StoreEntitySet="KorisniciUloge">
+          <ScalarProperty Name="KorisnikUlogaID" ColumnName="KorisnikUlogaID" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="UlogaID" ColumnName="UlogaID" />
+          <ScalarProperty Name="DatumIzmjene" ColumnName="DatumIzmjene" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kupci">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Kupci">
+        <MappingFragment StoreEntitySet="Kupci">
+          <ScalarProperty Name="KupacID" ColumnName="KupacID" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="DatumRegistracije" ColumnName="DatumRegistracije" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+          <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+          <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NarudzbaStavke">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.NarudzbaStavke">
+        <MappingFragment StoreEntitySet="NarudzbaStavke">
+          <ScalarProperty Name="NarudzbaStavkaID" ColumnName="NarudzbaStavkaID" />
+          <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Narudzbe">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Narudzbe">
+        <MappingFragment StoreEntitySet="Narudzbe">
+          <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+          <ScalarProperty Name="BrojNarudzbe" ColumnName="BrojNarudzbe" />
+          <ScalarProperty Name="KupacID" ColumnName="KupacID" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Otkazano" ColumnName="Otkazano" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ocjene">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Ocjene">
+        <MappingFragment StoreEntitySet="Ocjene">
+          <ScalarProperty Name="OcjenaID" ColumnName="OcjenaID" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="KupacID" ColumnName="KupacID" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Ocjena" ColumnName="Ocjena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SlikeNekretnina">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.SlikeNekretnina">
+        <MappingFragment StoreEntitySet="SlikeNekretnina">
+          <ScalarProperty Name="SlikaID" ColumnName="SlikaID" />
+          <ScalarProperty Name="SlikaNekretnine" ColumnName="SlikaNekretnine" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sobe">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Sobe">
+        <MappingFragment StoreEntitySet="Sobe">
+          <ScalarProperty Name="SobaID" ColumnName="SobaID" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Spratovi">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Spratovi">
+        <MappingFragment StoreEntitySet="Spratovi">
+          <ScalarProperty Name="SpratID" ColumnName="SpratID" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StanjaNekretnina">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.StanjaNekretnina">
+        <MappingFragment StoreEntitySet="StanjaNekretnina">
+          <ScalarProperty Name="StanjeID" ColumnName="StanjeID" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipGrijanja">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.TipGrijanja">
+        <MappingFragment StoreEntitySet="TipGrijanja">
+          <ScalarProperty Name="GrijanjeID" ColumnName="GrijanjeID" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uloge">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Uloge">
+        <MappingFragment StoreEntitySet="Uloge">
+          <ScalarProperty Name="UlogaID" ColumnName="UlogaID" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VrsteProdaje">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.VrsteProdaje">
+        <MappingFragment StoreEntitySet="VrsteProdaje">
+          <ScalarProperty Name="VrstaID" ColumnName="VrstaID" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_SelectByKorisnickoIme" FunctionName="ProdajaNekretninaModel.Store.esp_Korisnici_SelectByKorisnickoIme" />
+    <FunctionImportMapping FunctionImportName="esp_KorisniciUloge_SelectByKorisnik" FunctionName="ProdajaNekretninaModel.Store.esp_KorisniciUloge_SelectByKorisnik" />
+    <FunctionImportMapping FunctionImportName="esp_KorisniciUloge_Insert" FunctionName="ProdajaNekretninaModel.Store.esp_KorisniciUloge_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_Uloge_SelectAll" FunctionName="ProdajaNekretninaModel.Store.esp_Uloge_SelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_SelectByName" FunctionName="ProdajaNekretninaModel.Store.esp_Korisnici_SelectByName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Korisnici_SelectByName_Result">
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BrojUloga" ColumnName="BrojUloga" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_UpdateStatus" FunctionName="ProdajaNekretninaModel.Store.esp_Korisnici_UpdateStatus" />
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_Update" FunctionName="ProdajaNekretninaModel.Store.esp_Korisnici_Update" />
+    <FunctionImportMapping FunctionImportName="esp_Korisnici_ResetPass" FunctionName="ProdajaNekretninaModel.Store.esp_Korisnici_ResetPass" />
+    <FunctionImportMapping FunctionImportName="esp_KorisniciUlogeTEMP_SelectByKorisnik" FunctionName="ProdajaNekretninaModel.Store.esp_KorisniciUlogeTEMP_SelectByKorisnik" />
+    <EntitySetMapping Name="Gradovi">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Gradovi">
+        <MappingFragment StoreEntitySet="Gradovi">
+          <ScalarProperty Name="KantonID" ColumnName="KantonID" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+          <ScalarProperty Name="GradID" ColumnName="GradID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kantoni">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Kantoni">
+        <MappingFragment StoreEntitySet="Kantoni">
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="KantonID" ColumnName="KantonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_PretragaAdmin" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_PretragaAdmin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_PretragaAdmin_Result">
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Kupci_SelectByEmail" FunctionName="ProdajaNekretninaModel.Store.esp_Kupci_SelectByEmail" />
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectZadnjeDodane" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectZadnjeDodane">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectZadnjeDodane_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectProdaja" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectProdaja">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectProdaja_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectPotraznja" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectPotraznja">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectPotraznja_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectZadnjeDodaneProdaja" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectZadnjeDodaneProdaja">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectZadnjeDodaneProdaja_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectZadnjeDodaneIznajmljivanje" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectZadnjeDodaneIznajmljivanje">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectZadnjeDodaneIznajmljivanje_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectIznajmljivanje" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectIznajmljivanje">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectIznajmljivanje_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Narudzbe_Insert" FunctionName="ProdajaNekretninaModel.Store.esp_Narudzbe_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_NarudzbaStavke_Insert" FunctionName="ProdajaNekretninaModel.Store.esp_NarudzbaStavke_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_Ocjene_Provjeri" FunctionName="ProdajaNekretninaModel.Store.esp_Ocjene_Provjeri" />
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_Insert" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_Insert" />
+    <EntitySetMapping Name="Nekretnine">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Nekretnine">
+        <MappingFragment StoreEntitySet="Nekretnine">
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="Uknjiženo" ColumnName="Uknjiženo" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="Voda" ColumnName="Voda" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="StanjeID" ColumnName="StanjeID" />
+          <ScalarProperty Name="GrijanjeID" ColumnName="GrijanjeID" />
+          <ScalarProperty Name="SpratID" ColumnName="SpratID" />
+          <ScalarProperty Name="SobeID" ColumnName="SobeID" />
+          <ScalarProperty Name="KantonID" ColumnName="KantonID" />
+          <ScalarProperty Name="KategorijaID" ColumnName="KategorijaID" />
+          <ScalarProperty Name="VrstaID" ColumnName="VrstaID" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_UpdateBrojPosjeta" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_UpdateBrojPosjeta" />
+    <FunctionImportMapping FunctionImportName="esp_Kupci_Update" FunctionName="ProdajaNekretninaModel.Store.esp_Kupci_Update" />
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectByKupac" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectByKupac">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectByKupac_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+          <ScalarProperty Name="naslov" ColumnName="naslov" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_TOP3" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_TOP3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_TOP3_Result">
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Narudzba_Insert" FunctionName="ProdajaNekretninaModel.Store.esp_Narudzba_Insert" />
+    <FunctionImportMapping FunctionImportName="esp_Narudzba_UpdateStatus" FunctionName="ProdajaNekretninaModel.Store.esp_Narudzba_UpdateStatus" />
+    <EntitySetMapping Name="Izlazi">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Izlazi">
+        <MappingFragment StoreEntitySet="Izlazi">
+          <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+          <ScalarProperty Name="IznosSaPDV" ColumnName="IznosSaPDV" />
+          <ScalarProperty Name="IznosBezPDV" ColumnName="IznosBezPDV" />
+          <ScalarProperty Name="Zakljucen" ColumnName="Zakljucen" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="BrojRacuna" ColumnName="BrojRacuna" />
+          <ScalarProperty Name="IzlazID" ColumnName="IzlazID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_Narudzbe_SelectAll" FunctionName="ProdajaNekretninaModel.Store.esp_Narudzbe_SelectAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Narudzbe_SelectAll_Result">
+          <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+          <ScalarProperty Name="BrojNarudzbe" ColumnName="BrojNarudzbe" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ImePrezime" ColumnName="ImePrezime" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Potraznja">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.Potraznja">
+        <MappingFragment StoreEntitySet="Potraznja">
+          <ScalarProperty Name="KupacID" ColumnName="KupacID" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="GradID" ColumnName="GradID" />
+          <ScalarProperty Name="PotraznjaID" ColumnName="PotraznjaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_PotraznjaInsert" FunctionName="ProdajaNekretninaModel.Store.esp_PotraznjaInsert" />
+    <FunctionImportMapping FunctionImportName="esp_PotraznjaSelectAll" FunctionName="ProdajaNekretninaModel.Store.esp_PotraznjaSelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_PotraznjaKorisniciEmail" FunctionName="ProdajaNekretninaModel.Store.esp_PotraznjaKorisniciEmail" />
+    <FunctionImportMapping FunctionImportName="esp_IzlaziByDatum" FunctionName="ProdajaNekretninaModel.Store.esp_IzlaziByDatum">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_IzlaziByDatum_Result1">
+          <ScalarProperty Name="BrojRacuna" ColumnName="BrojRacuna" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+          <ScalarProperty Name="Iznos" ColumnName="Iznos" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Narudzba_Insert_Izlaz_Stavka" FunctionName="ProdajaNekretninaModel.Store.esp_Narudzba_Insert_Izlaz_Stavka" />
+    <FunctionImportMapping FunctionImportName="esp_Izlazi_Ugovor" FunctionName="ProdajaNekretninaModel.Store.esp_Izlazi_Ugovor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Izlazi_Ugovor_Result">
+          <ScalarProperty Name="IzlazID" ColumnName="IzlazID" />
+          <ScalarProperty Name="BrojRacuna" ColumnName="BrojRacuna" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="Zakljucen" ColumnName="Zakljucen" />
+          <ScalarProperty Name="IznosBezPDV" ColumnName="IznosBezPDV" />
+          <ScalarProperty Name="IznosSaPDV" ColumnName="IznosSaPDV" />
+          <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+          <ScalarProperty Name="IzlazStavkaID" ColumnName="IzlazStavkaID" />
+          <ScalarProperty Name="IzlazID1" ColumnName="IzlazID1" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Popust" ColumnName="Popust" />
+          <ScalarProperty Name="NekretninaID1" ColumnName="NekretninaID1" />
+          <ScalarProperty Name="VrstaID" ColumnName="VrstaID" />
+          <ScalarProperty Name="KategorijaID" ColumnName="KategorijaID" />
+          <ScalarProperty Name="KantonID" ColumnName="KantonID" />
+          <ScalarProperty Name="SobeID" ColumnName="SobeID" />
+          <ScalarProperty Name="SpratID" ColumnName="SpratID" />
+          <ScalarProperty Name="GrijanjeID" ColumnName="GrijanjeID" />
+          <ScalarProperty Name="StanjeID" ColumnName="StanjeID" />
+          <ScalarProperty Name="KorisnikID1" ColumnName="KorisnikID1" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Cijena1" ColumnName="Cijena1" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Voda" ColumnName="Voda" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Uknjiženo" ColumnName="Uknjiženo" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="KorisnikID2" ColumnName="KorisnikID2" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefon1" ColumnName="Telefon1" />
+          <ScalarProperty Name="KorisnickoIme" ColumnName="KorisnickoIme" />
+          <ScalarProperty Name="LozinkaHash" ColumnName="LozinkaHash" />
+          <ScalarProperty Name="LozinkaSalt" ColumnName="LozinkaSalt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Izlazi_Ugovor1" FunctionName="ProdajaNekretninaModel.Store.esp_Izlazi_Ugovor1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Izlazi_Ugovor1_Result">
+          <ScalarProperty Name="IzlazID" ColumnName="IzlazID" />
+          <ScalarProperty Name="BrojRacuna" ColumnName="BrojRacuna" />
+          <ScalarProperty Name="IznosBezPDV" ColumnName="IznosBezPDV" />
+          <ScalarProperty Name="IznosSaPDV" ColumnName="IznosSaPDV" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+          <ScalarProperty Name="Popust" ColumnName="Popust" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="Uknjiženo" ColumnName="Uknjiženo" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Izlazi_Zakljuci" FunctionName="ProdajaNekretninaModel.Store.esp_Izlazi_Zakljuci" />
+    <FunctionImportMapping FunctionImportName="esp_Narudzba_GetByDate" FunctionName="ProdajaNekretninaModel.Store.esp_Narudzba_GetByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Narudzba_GetByDate_Result1">
+          <ScalarProperty Name="NarudzbaID" ColumnName="NarudzbaID" />
+          <ScalarProperty Name="BrojNarudzbe" ColumnName="BrojNarudzbe" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ImePrezime" ColumnName="ImePrezime" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="JavnaPitanja">
+      <EntityTypeMapping TypeName="ProdajaNekretninaModel.JavnaPitanja">
+        <MappingFragment StoreEntitySet="JavnaPitanja">
+          <ScalarProperty Name="Odgovoreno" ColumnName="Odgovoreno" />
+          <ScalarProperty Name="Odgovor" ColumnName="Odgovor" />
+          <ScalarProperty Name="Pitanje" ColumnName="Pitanje" />
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="PitanjeID" ColumnName="PitanjeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="esp_Pitanja_InsertPitanje" FunctionName="ProdajaNekretninaModel.Store.esp_Pitanja_InsertPitanje" />
+    <FunctionImportMapping FunctionImportName="esp_Pitanja_SelectAll" FunctionName="ProdajaNekretninaModel.Store.esp_Pitanja_SelectAll" />
+    <FunctionImportMapping FunctionImportName="esp_Pitanja_InsertOdgovor" FunctionName="ProdajaNekretninaModel.Store.esp_Pitanja_InsertOdgovor" />
+    <FunctionImportMapping FunctionImportName="esp_Pitanja_SelectNeodgovorenaByKorID" FunctionName="ProdajaNekretninaModel.Store.esp_Pitanja_SelectNeodgovorenaByKorID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Pitanja_SelectNeodgovorenaByKorID_Result1">
+          <ScalarProperty Name="PitanjeID" ColumnName="PitanjeID" />
+          <ScalarProperty Name="Pitanje" ColumnName="Pitanje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_DeleteKorisniciUloge" FunctionName="ProdajaNekretninaModel.Store.esp_DeleteKorisniciUloge" />
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_All" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_All">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_All_Result">
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectProdajaNEW" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectProdajaNEW">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectProdajaNEW_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectProdajaPage" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectProdajaPage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectProdajaPage_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnine_SelectIznajmljivanjePage" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnine_SelectIznajmljivanjePage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Nekretnine_SelectIznajmljivanjePage_Result">
+          <ScalarProperty Name="NekretninaID" ColumnName="NekretninaID" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Aktivna" ColumnName="Aktivna" />
+          <ScalarProperty Name="BrojKvadrata" ColumnName="BrojKvadrata" />
+          <ScalarProperty Name="BrojPosjeta" ColumnName="BrojPosjeta" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="DatumObjave" ColumnName="DatumObjave" />
+          <ScalarProperty Name="Garaža" ColumnName="Garaža" />
+          <ScalarProperty Name="GodinaIzgradnje" ColumnName="GodinaIzgradnje" />
+          <ScalarProperty Name="Internet" ColumnName="Internet" />
+          <ScalarProperty Name="Knalizacija" ColumnName="Knalizacija" />
+          <ScalarProperty Name="Lift" ColumnName="Lift" />
+          <ScalarProperty Name="Namješten" ColumnName="Namješten" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="NedavnoAdaptiran" ColumnName="NedavnoAdaptiran" />
+          <ScalarProperty Name="Novogradnja" ColumnName="Novogradnja" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="SlikaThumb" ColumnName="SlikaThumb" />
+          <ScalarProperty Name="Struja" ColumnName="Struja" />
+          <ScalarProperty Name="NazivGrijanja" ColumnName="NazivGrijanja" />
+          <ScalarProperty Name="NazivKategorije" ColumnName="NazivKategorije" />
+          <ScalarProperty Name="BrojSoba" ColumnName="BrojSoba" />
+          <ScalarProperty Name="NazivSprata" ColumnName="NazivSprata" />
+          <ScalarProperty Name="NazivStanja" ColumnName="NazivStanja" />
+          <ScalarProperty Name="NazivVrste" ColumnName="NazivVrste" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="NazivGarda" ColumnName="NazivGarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_Nekretnina_UpdateStatus" FunctionName="ProdajaNekretninaModel.Store.esp_Nekretnina_UpdateStatus" />
+    <FunctionImportMapping FunctionImportName="esp_Izlazi_SelAll" FunctionName="ProdajaNekretninaModel.Store.esp_Izlazi_SelAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdajaNekretninaModel.esp_Izlazi_SelAll_Result">
+          <ScalarProperty Name="BrojRacuna" ColumnName="BrojRacuna" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="IznosBezPDV" ColumnName="IznosBezPDV" />
+          <ScalarProperty Name="IznosSaPDV" ColumnName="IznosSaPDV" />
+          <ScalarProperty Name="Zakljucen" ColumnName="Zakljucen" />
+          <ScalarProperty Name="IzlazID" ColumnName="IzlazID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="esp_NekretninaIDByIzlaz" FunctionName="ProdajaNekretninaModel.Store.esp_NekretninaIDByIzlaz" />
+    <FunctionImportMapping FunctionImportName="esp_IDNEKT" FunctionName="ProdajaNekretninaModel.Store.esp_IDNEKT" />
+  </EntityContainerMapping>
+</Mapping>

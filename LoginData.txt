@@ -1,0 +1,18 @@
+ADMINISTRACIJA: 
+user: ermin
+pw: ermin2014
+
+
+
+WEB DIO:
+user1: muris@apn.ba	
+pw: muris
+
+user2: test@apn.com	
+pw: test
+
+
+
+MAIL:
+user: nekretnine.seminarski.pep@gmail.com
+pw: nekretni

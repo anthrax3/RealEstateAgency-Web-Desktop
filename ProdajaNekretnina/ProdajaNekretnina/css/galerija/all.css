@@ -1,0 +1,146 @@
+/*-------------------*/
+/*  GENERAL RESET    */
+/*-------------------*/
+
+ol, ul {
+	list-style:none;
+}
+blockquote, q {
+	quotes:none;
+}
+q:before, q:after {
+	content: '';
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+input, textarea, select {
+	font:11px Arial, Helvetica, sans-serif;
+	vertical-align:middle;
+	padding:0;
+	margin:0;
+}
+input:focus, textarea:focus {
+	outline: none;
+}
+form, fieldset {
+	border-style:none;
+}
+
+
+/*-------------------*/
+/*   RIGHT CONTENT   */
+/*-------------------*/
+
+/* Thumbnail Gallery Content*/
+#right {
+	width: 500px;
+	float: right;
+    margin-top:20px;
+    margin-right:110px;
+}
+#right .thumbnails {
+	overflow: hidden;
+	padding:10px 0 0 32px;
+}
+#right .thumbnails li {
+	float: left;
+	margin: 0 21px 18px 0;
+}
+#right .thumbnails li a {
+	border: 1px solid #eaeaea;
+	padding: 2px;
+	background: #f2f2f2;
+	display: block;
+}
+#right .navigation {
+	margin: -10px auto 0;
+	overflow: hidden;
+	width: 50px;
+}
+#right .navigation a {
+	background:url("../images/sprite.png") no-repeat scroll 0 0 transparent;
+	display:block;
+	float:left;
+	height:21px;
+	text-indent:-999999px;
+	width:21px;
+}
+#right .navigation .prev {
+	background-position: -159px -75px;
+	margin: 0 8px 0 0;
+}
+#right .navigation .next {
+	background-position: -186px -75px;
+}
+/* Slideshow Gallery Content*/
+#gallery-holder {
+	position: relative;
+	width: 719px;
+	margin:20px auto 0;
+	height: 442px;
+}
+#gallery-holder .slideshow-frame {
+	background:url("../images/slideshow-frame.png") no-repeat scroll 0 0 transparent;
+	height:442px;
+	position:absolute;
+	top:0;
+	left: 0;
+	width:719px;
+	z-index: 10;
+}
+#gallery-holder .slideshow li {
+	height:442px;
+	position:absolute;
+	top:0;
+	width:719px
+}
+#gallery-holder .navigation a {
+	height:92px;
+	left:0;
+	margin-top:-44px;
+	position:absolute;
+	top:50%;
+	width:47px;
+	z-index:15;
+}
+#gallery-holder .navigation a.prev {
+	background-position:-6px -103px;
+	margin-top:-44px;
+}
+#gallery-holder .navigation a.next {
+	background-position:-65px -103px;
+	left:auto;
+	right:0;
+}
+#modules-holder {
+	overflow: hidden;
+	margin-top: 24px;
+	margin-left: 20px;
+}
+#modules-holder .module {
+	float: left;
+	width: 204px;
+	margin-right: 40px;
+}
+#modules-holder .module h2 {
+	font-family:'Museo700';
+	font-size:18px;
+	font-weight:normal;
+	margin-bottom:5px;
+	padding-left:25px;
+}
+#modules-holder .module h2.module-one {
+	background:url("../images/sprite.png") no-repeat scroll -128px -170px transparent;
+}
+#modules-holder .module h2.module-two {
+	background:url("../images/sprite.png") no-repeat scroll -128px -140px transparent;
+}
+#modules-holder .module h2.module-three {
+	background:url("../images/sprite.png") no-repeat scroll -128px -110px transparent;
+}
+#modules-holder .module p {
+	color: #6a6a6a;
+	line-height: 15px;
+}

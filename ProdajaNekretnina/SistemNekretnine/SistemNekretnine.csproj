@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF85B766-455A-433B-B856-3D45444F9286}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemNekretnine</RootNamespace>
+    <AssemblyName>SistemNekretnine</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DAKorisnici.cs" />
+    <Compile Include="DB\DAKupci.cs" />
+    <Compile Include="DB\DANarudzbe.cs" />
+    <Compile Include="DB\DANekretnine.cs" />
+    <Compile Include="DB\esp_IzlaziByDatum_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_IzlaziByDatum_Result1.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Izlazi_SelAll_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Izlazi_Ugovor1_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Izlazi_Ugovor_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Korisnici_SelectByName_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Narudzba_GetByDate_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Narudzba_GetByDate_Result1.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Narudzbe_SelectAll_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_All_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_PretragaAdmin_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectByKupac_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectIznajmljivanjePage_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectIznajmljivanje_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectPotraznja_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectProdajaNEW_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectProdajaPage_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectProdaja_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectZadnjeDodaneIznajmljivanje_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectZadnjeDodaneProdaja_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_SelectZadnjeDodane_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Nekretnine_TOP3_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Pitanja_SelectAll_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Pitanja_SelectNeodgovorenaByKorID_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_Pitanja_SelectNeodgovorenaByKorID_Result1.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\esp_PotraznjaSelectAll_Result.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Gradovi.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Izlazi.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\IzlazStavke.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\JavnaPitanja.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Kantoni.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Kategorije.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Korisnici.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\KorisniciUloge.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Kupci.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelNekretnine.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNekretnine.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelNekretnine.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ModelNekretnine.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNekretnine.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\NarudzbaStavke.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Narudzbe.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Nekretnine.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Ocjene.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Potraznja.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SlikeNekretnina.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Sobe.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Spratovi.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\StanjaNekretnina.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TipGrijanja.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Uloge.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\VrsteProdaje.cs">
+      <DependentUpon>ModelNekretnine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Preporuka.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\UIHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DB\ModelNekretnine.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelNekretnine.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DB\ModelNekretnine.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelNekretnine.edmx</DependentUpon>
+      <LastGenOutput>ModelNekretnine.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DB\ModelNekretnine.edmx.diagram">
+      <DependentUpon>ModelNekretnine.edmx</DependentUpon>
+    </None>
+    <None Include="DB\ModelNekretnine.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelNekretnine.edmx</DependentUpon>
+      <LastGenOutput>ModelNekretnine.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A473ABF-0F77-49FE-8725-F3A4EE08B759}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Administracija</RootNamespace>
+    <AssemblyName>Administracija</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GlavnaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlavnaForma.Designer.cs">
+      <DependentUpon>GlavnaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Izvjestaji\Izlazi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\Izlazi.Designer.cs">
+      <DependentUpon>Izlazi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izvjestaji\ProdajaNekretnina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\ProdajaNekretnina.Designer.cs">
+      <DependentUpon>ProdajaNekretnina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izvjestaji\Ugovor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izvjestaji\Ugovor.Designer.cs">
+      <DependentUpon>Ugovor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProdajaNekretninaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdajaNekretninaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProdajaNekretninaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdajaNekretninaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TempKorisnici\IzmjenaLicnihPodataka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempKorisnici\IzmjenaLicnihPodataka.Designer.cs">
+      <DependentUpon>IzmjenaLicnihPodataka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempKorisnici\IzmjenaStatusnihPodataka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempKorisnici\IzmjenaStatusnihPodataka.Designer.cs">
+      <DependentUpon>IzmjenaStatusnihPodataka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempKorisnici\NoviKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempKorisnici\NoviKorisnik.Designer.cs">
+      <DependentUpon>NoviKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForma.Designer.cs">
+      <DependentUpon>LoginForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Poruke.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Poruke.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TempKorisnici\PretragaKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempKorisnici\PretragaKorisnika.Designer.cs">
+      <DependentUpon>PretragaKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempNarudzbe\PregledNarudzbi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempNarudzbe\PregledNarudzbi.Designer.cs">
+      <DependentUpon>PregledNarudzbi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempNarudzbe\ZakljuciNaruzbu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempNarudzbe\ZakljuciNaruzbu.Designer.cs">
+      <DependentUpon>ZakljuciNaruzbu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempNekretnine\NovaNekretnina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempNekretnine\NovaNekretnina.Designer.cs">
+      <DependentUpon>NovaNekretnina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempNekretnine\PregledNekretnina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempNekretnine\PregledNekretnina.Designer.cs">
+      <DependentUpon>PregledNekretnina.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GlavnaForma.resx">
+      <DependentUpon>GlavnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\Izlazi.resx">
+      <DependentUpon>Izlazi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\ProdajaNekretnina.resx">
+      <DependentUpon>ProdajaNekretnina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izvjestaji\ProdajaReport.rdlc" />
+    <EmbeddedResource Include="Izvjestaji\ProdajaReport1.rdlc" />
+    <EmbeddedResource Include="Izvjestaji\Report1.rdlc" />
+    <EmbeddedResource Include="Izvjestaji\Ugovor.resx">
+      <DependentUpon>Ugovor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempKorisnici\IzmjenaLicnihPodataka.resx">
+      <DependentUpon>IzmjenaLicnihPodataka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempKorisnici\IzmjenaStatusnihPodataka.resx">
+      <DependentUpon>IzmjenaStatusnihPodataka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempKorisnici\NoviKorisnik.resx">
+      <DependentUpon>NoviKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForma.resx">
+      <DependentUpon>LoginForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poruke.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Poruke.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TempKorisnici\PretragaKorisnika.resx">
+      <DependentUpon>PretragaKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempNarudzbe\PregledNarudzbi.resx">
+      <DependentUpon>PregledNarudzbi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempNarudzbe\ZakljuciNaruzbu.resx">
+      <DependentUpon>ZakljuciNaruzbu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempNekretnine\NovaNekretnina.resx">
+      <DependentUpon>NovaNekretnina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempNekretnine\PregledNekretnina.resx">
+      <DependentUpon>PregledNekretnina.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\SistemNekretnine\App.Config">
+      <Link>App.Config</Link>
+    </None>
+    <None Include="ProdajaNekretninaDataSet.xsc">
+      <DependentUpon>ProdajaNekretninaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProdajaNekretninaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProdajaNekretninaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProdajaNekretninaDataSet.xss">
+      <DependentUpon>ProdajaNekretninaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProdajaNekretninaDataSet1.xsc">
+      <DependentUpon>ProdajaNekretninaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProdajaNekretninaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProdajaNekretninaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProdajaNekretninaDataSet1.xss">
+      <DependentUpon>ProdajaNekretninaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\SistemNekretnine.DB.esp_IzlaziByDatum_Result.datasource" />
+    <None Include="Properties\DataSources\SistemNekretnine.DB.esp_IzlaziByDatum_Result1.datasource" />
+    <None Include="Properties\DataSources\SistemNekretnine.DB.esp_Izlazi_Ugovor1_Result.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemNekretnine\SistemNekretnine.csproj">
+      <Project>{ef85b766-455a-433b-b856-3d45444f9286}</Project>
+      <Name>SistemNekretnine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
